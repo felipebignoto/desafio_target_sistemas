@@ -1,17 +1,12 @@
 function verificarLetraA(str) {
-    let contador = 0;
-   for(let i = 0 ; i< str.length ; i++) {
-        if(str[i] === 'A' || str[i] === 'a'){
-            contador ++;
-        }
-   }
+    const regex = /a/gi; 
+    const matches = str.match(regex); 
 
-   if(contador > 0){
-    console.log("Existem " + contador + " 'a' presnetes na palavra " + str)
-   }
-   else{
-    console.log("Não existe a letra a na palavra " + str)
-   }
+    if (matches) {
+        console.log(`A letra 'a' aparece ${matches.length} vezes.`);
+    } else {
+        console.log("A letra 'a' não foi encontrada.");
+    }
 }
 
 const exemplo = "Felipe";
